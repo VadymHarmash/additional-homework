@@ -1,0 +1,91 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .pie-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px #000 solid;
+}
+
+section .pie-container::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 5;
+    width: 50%;
+    height: 50%;
+    color: white;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    border: 2px #000 solid;
+}
+
+section .pie-container .pie {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #AAAAAA;
+    border-radius: 50%;
+    clip: rect(0px, 75px, 150px, 0px);
+}
+
+section .pie-container .php {
+    z-index: 1;
+    background-color: #FF851B;
+    transform: rotate(160deg);
+}
+
+section .pie-container .js {
+    z-index: 2;
+    background-color: #2ECC40;
+    transform: rotate(-40deg);
+}
+
+section .pie-container .html {
+    z-index: 3;
+    background-color: #F90123;
+    transform: rotate(0deg);
+}
+
+section .pie-container .css {
+    z-index: 4;
+    background-color: #0074D9;
+    transform: rotate(110deg);
+}
+
+section .stats ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+section .stats ul li {
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px #000 solid;
+    font-weight: 900;
+}
+
+section .stats ul li:first-child {
+    background-color: #0074D9;
+}
+
+section .stats ul li:nth-child(2) {
+    background-color: #F90123;
+}
+
+section .stats ul li:nth-child(3) {
+    background-color: #FF851B;
+}
+
+section .stats ul li:last-child {
+    background-color: #2ECC40;
+}
